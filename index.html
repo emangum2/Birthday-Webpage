@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laina Partyyy</title>
+    <link rel="stylesheet" href="b.css">
+</head>
+<body>
+    <h1>Are you coming to my party?</h1>
+    <div>
+        <img id="partyImg" onmouseover="bigImg(this)" onmouseout="normImg(this)" src="blushing.jpg" width="200px" height="200px">
+    </div><br>
+
+    <div class="inputDiv">
+        <label for="fname">First name:</label>&nbsp;
+        <input type="text" id="fname">&nbsp;&nbsp;
+        
+        <label for="lname">Last name:</label>&nbsp;
+        <input type="text" id="lname">
+    </div><br>
+    
+
+    <div>
+        <button class="button" onclick="clickY()">Yes</button>
+        <button class="button" onclick="clickN()">No</button>
+    </div>
+
+    <div>
+        <h1>Guestlist</h1>
+    </div>
+    
+    <div>
+        <ul id="yesList">
+        </ul>
+    
+        <ul id="noList">
+        </ul>
+    </div>
+        
+    
+    
+    
+    <script>
+        //Image grows when hovered
+        function bigImg(x){
+            x.style.height="300px";
+            x.style.width="300px";
+        }
+        function normImg(x){
+            x.style.height="200px";
+            x.style.width="200px";
+        }
+
+        function clickY(){
+            let firstName = document.getElementById("fname").value;
+            let lastName = document.getElementById("lname").value;
+            if (firstName && lastName){
+                let listItem = document.createElement("li");
+                listItem.textContent = firstName + " " + lastName;
+                document.getElementById("yesList").appendChild(listItem);
+
+                document.getElementById("partyImg").src = "kid.jpg";
+                
+                document.getElementById("fname").value = "";
+                document.getElementById("lname").value = "";
+            }
+        }
+
+        function clickN(){
+            let firstName = document.getElementById("fname").value;
+            let lastName = document.getElementById("lname").value;
+            if (firstName && lastName){
+                let listItem = document.createElement("li");
+                listItem.textContent = firstName + " " + lastName;
+                document.getElementById("noList").appendChild(listItem);
+
+                document.getElementById("partyImg").src = "sad kat.jpg";
+
+                document.getElementById("fname").value = "";
+                document.getElementById("lname").value = "";
+            }
+        }
+    </script>
+   
+</body>
+</html>
