@@ -1,0 +1,40 @@
+body {
+    background-color: #E5BFD6;
+}
+
+h1 {
+    color: #F6E3DB;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 2px 1.5px rgb(139, 121, 121);
+}
+div {
+    display:flex;
+    justify-content: center;
+}
+.inputDiv {
+    display:flex;
+    justify-content: center;
+}
+.button {
+    background-color: hwb(304 61% 17%);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#yesList {
+    color:#d02a6c;
+    justify-content: left;
+    
+}
+
+#noList {
+    color: #DB6857;
+    justify-content: right;
+}
